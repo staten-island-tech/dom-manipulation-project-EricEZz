@@ -1,4 +1,19 @@
-#container-box {
+
+*{
+    background-color:aquamarine;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* #container-box {
     background-color: black;
     font-size: 2vh;
     color: cornsilk;
@@ -7,4 +22,4 @@
 
 .cat-poster{
     width: 10rem;
-}
+} */
