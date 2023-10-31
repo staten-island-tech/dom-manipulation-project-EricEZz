@@ -3,16 +3,12 @@ const DOMSelectors = {
   button: document.querySelector("#button"),
   topinput: document.querySelector("#Top-text"),
   bottominput: document.querySelector("#bottom-text"),
-  submit: document.querySelector()
+  submit: document.querySelector("#submit")
   //image: document.image.querySelector("#image")
 };
 
-function addCard(){
-    document.querySelector('#button')
 
-}
-
-DOMSelectors
+//function addCard(){  document.querySelector('#button')}
 
 DOMSelectors.button.addEventListener("click", function(){
     const texttopinput = 
