@@ -3,8 +3,8 @@ const DOMSelectors = {
   button: document.querySelector("#button"),
   topinput: document.querySelector("#Top-text"),
   bottominput: document.querySelector("#bottom-text"),
-  submit: document.querySelector("#submit")
-  //image: document.image.querySelector("#image")
+  submit: document.querySelector("#submit"),
+  image: document.querySelector("#image")
 };
 
 
