@@ -3,18 +3,37 @@ const DOMSelectors = {
   button: document.querySelector("#button"),
   topinput: document.querySelector("#Top-text"),
   bottominput: document.querySelector("#bottom-text"),
+  form:document.querySelector("#form"),
   submit: document.querySelector("#submit"),
   image: document.querySelector("#image")
 };
 
 
 //function addCard(){  document.querySelector('#button')}
+DOMSelectors.form.addEventListener("submit",function(event){
+event.preventDefault();
+ let meme {
+    topinput: DOMSelectors.topinput.value
+    
+    //Top: DOMSelectors.top.value
+    //img: DOMSelectors.bottom.value 
+ }
 
-DOMSelectors.button.addEventListener("click", function(){
+});
+
+function card(){
+    document.querySelector("#Top-text"),
+    document.querySelector("#image"),
+    document.querySelector("#botton-text"),
+    Top
+};
+DOMSelectors.box.insertAdjacentHTML("beforebegin",
+'');
+
+//DOMSelectors.button.addEventListener("click", function(){
     const texttopinput = 
     DOMSelectors.topinput.value; 
-    console.log(texttopinput);
-})
+//})
 
 
 
