@@ -1,20 +1,84 @@
 const DOMSelectors = {
-   container: document.querySelector(".box"),
+    container: document.querySelector(".container"),
   button: document.querySelector("#button"),
-  topinput: document.querySelector("#Top-text"),
+  topinput: document.querySelector("#top-text"),
   bottominput: document.querySelector("#bottom-text"),
-  submit: document.querySelector("#submit"),
-  image: document.querySelector("#image")
+  //submit: document.querySelector()
+  image: document.querySelector("#img")
 };
 
+function addCard(){
+    DOMSelectors.button.addEventListener("click", function(){
 
-//function addCard(){  document.querySelector('#button')}
+        const inputTop = DOMSelectors.topinput.value 
+        const inputBottom = DOMSelectors.bottominput.value
+        const inputImage = DOMSelectors.image.value
 
-DOMSelectors.button.addEventListener("click", function(){
-    const texttopinput = 
-    DOMSelectors.topinput.value; 
-    console.log(texttopinput);
-})
+
+
+        const card = `
+        <div class="box">
+            <h2>
+                ${inputTop}
+            </h2>
+            <img src="${inputImage}" alt="user">
+            <p>${inputBottom}</p>
+            <button>delete</button>
+        </div>`
+
+        
+        DOMSelectors.container.insertAdjacentHTML("beforebegin", `${card}`)
+        
+        function remove(){
+            DOMSelectors.container.addEventListener("click", function (remove) { 
+                if (remove.target.classList.contains("box")) { 
+                    DOMSelectors.container.delete(remove.thing); 
+        
+                }
+            });
+        
+        }
+        remove()
+    })
+}
+
+addCard()
+function remove(){
+    DOMSelectors.container.addEventListener("click", function (remove) { 
+        if (remove.target.classList.contains("box")) { 
+            DOMSelectors.container.delete(remove.thing); 
+
+        }
+    });
+
+}
+remove()
+
+//const DOMSelectors = {
+  // container: document.querySelector(".box"),
+  //button: document.querySelector("#button"),
+  //topinput: document.querySelector("#Top-text"),
+  //bottominput: document.querySelector("#bottom-text"),
+  //submit: document.querySelector("#submit"),
+  //image: document.querySelector("#image")
+//};
+
+
+//function addCard(){//
+      
+
+//DOMSelectors.button.addEventListener("click", function(){
+  //  console.log("hey");
+
+//    const card = `
+  //  <div class="box">
+    //<h2>
+      //  ${inputTop}
+   // </h2>  <p>${inputBottom}</p></div>`
+
+ //   DOMSelectors.container.insertAdjacentElement("beforeend",)
+//})
+//}
 
 
 
