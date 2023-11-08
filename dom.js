@@ -1,39 +1,84 @@
 const DOMSelectors = {
-   container: document.querySelector(".box"),
+    container: document.querySelector(".container"),
   button: document.querySelector("#button"),
-  topinput: document.querySelector("#Top-text"),
+  topinput: document.querySelector("#top-text"),
   bottominput: document.querySelector("#bottom-text"),
-  form:document.querySelector("#form"),
-  submit: document.querySelector("#submit"),
-  image: document.querySelector("#image")
+  //submit: document.querySelector()
+  image: document.querySelector("#img")
 };
 
+function addCard(){
+    DOMSelectors.button.addEventListener("click", function(){
 
-//function addCard(){  document.querySelector('#button')}
-DOMSelectors.form.addEventListener("submit",function(event){
-event.preventDefault();
- let meme {
-    topinput: DOMSelectors.topinput.value
-    
-    //Top: DOMSelectors.top.value
-    //img: DOMSelectors.bottom.value 
- }
+        const inputTop = DOMSelectors.topinput.value 
+        const inputBottom = DOMSelectors.bottominput.value
+        const inputImage = DOMSelectors.image.value
 
-});
 
-function card(){
-    document.querySelector("#Top-text"),
-    document.querySelector("#image"),
-    document.querySelector("#botton-text"),
-    Top
-};
-DOMSelectors.box.insertAdjacentHTML("beforebegin",
-'');
+
+        const card = `
+        <div class="box">
+            <h2>
+                ${inputTop}
+            </h2>
+            <img src="${inputImage}" alt="user">
+            <p>${inputBottom}</p>
+            <button>delete</button>
+        </div>`
+
+        
+        DOMSelectors.container.insertAdjacentHTML("beforebegin", `${card}`)
+        
+        function remove(){
+            DOMSelectors.container.addEventListener("click", function (remove) { 
+                if (remove.target.classList.contains("box")) { 
+                    DOMSelectors.container.delete(remove.thing); 
+        
+                }
+            });
+        
+        }
+        remove()
+    })
+}
+
+addCard()
+function remove(){
+    DOMSelectors.container.addEventListener("click", function (remove) { 
+        if (remove.target.classList.contains("box")) { 
+            DOMSelectors.container.delete(remove.thing); 
+
+        }
+    });
+
+}
+remove()
+
+//const DOMSelectors = {
+  // container: document.querySelector(".box"),
+  //button: document.querySelector("#button"),
+  //topinput: document.querySelector("#Top-text"),
+  //bottominput: document.querySelector("#bottom-text"),
+  //submit: document.querySelector("#submit"),
+  //image: document.querySelector("#image")
+//};
+
+
+//function addCard(){//
+      
 
 //DOMSelectors.button.addEventListener("click", function(){
-    const texttopinput = 
-    DOMSelectors.topinput.value; 
+  //  console.log("hey");
+
+//    const card = `
+  //  <div class="box">
+    //<h2>
+      //  ${inputTop}
+   // </h2>  <p>${inputBottom}</p></div>`
+
+ //   DOMSelectors.container.insertAdjacentElement("beforeend",)
 //})
+//}
 
 
 
