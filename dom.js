@@ -15,7 +15,6 @@ function addCard(){
         const inputImage = DOMSelectors.image.value
 
 
-
         const card = `
         <div class="box">
             <h2>
@@ -31,28 +30,16 @@ function addCard(){
         
         function remove(){
             DOMSelectors.container.addEventListener("click", function (remove) { 
-                if (remove.target.classList.contains("box")) { 
-                    DOMSelectors.container.delete(remove.thing); 
-        
+                if (remove.thing.classList.contains("box")) { 
+                    DOMSelectors.container.remove(remove.thing); 
+                    DOMSelectors.container.removeElement(remove.thing);
                 }
             });
-        
         }
-        remove()
+        
     })
 }
-
 addCard()
-function remove(){
-    DOMSelectors.container.addEventListener("click", function (remove) { 
-        if (remove.target.classList.contains("box")) { 
-            DOMSelectors.container.delete(remove.thing); 
-
-        }
-    });
-
-}
-remove()
 
 //const DOMSelectors = {
   // container: document.querySelector(".box"),
