@@ -1,14 +1,13 @@
 const DOMSelectors = {
     container: document.querySelector(".container"),
-  button: document.querySelector("#button"),
+  Submit: document.querySelector(".submit"),
   topinput: document.querySelector("#top-text"),
   bottominput: document.querySelector("#bottom-text"),
-  //submit: document.querySelector()
-  image: document.querySelector("#img")
+  image: document.querySelector("#img"),
+  form: document.querySelector("#form") 
 };
 
 function addCard(){
-    DOMSelectors.button.addEventListener("click", function(){
 
         const inputTop = DOMSelectors.topinput.value 
         const inputBottom = DOMSelectors.bottominput.value
@@ -22,24 +21,23 @@ function addCard(){
             </h2>
             <img src="${inputImage}" alt="user">
             <p>${inputBottom}</p>
-            <button>delete</button>
+            <button class="but">delete</button>
         </div>`
-
-        
         DOMSelectors.container.insertAdjacentHTML("beforebegin", `${card}`)
-        
-        function remove(){
-            DOMSelectors.container.addEventListener("click", function (remove) { 
-                if (remove.thing.classList.contains("box")) { 
-                    DOMSelectors.container.remove(remove.thing); 
-                    DOMSelectors.container.removeElement(remove.thing);
-                }
-            });
-        }
-        
+    }
+    DOMSelectors.form.addEventListener("submit", function(event){
+        event.preventDefault();
+        addCard();
+        del();
     })
-}
-addCard()
+    function del(){
+        let and = document.querySelectorAll(".but")
+        and.forEach((forms)=> forms.addEventListener('click', function(event){
+            forms.parentElement.remove();
+        }))
+    }
+
+
 
 //const DOMSelectors = {
   // container: document.querySelector(".box"),
